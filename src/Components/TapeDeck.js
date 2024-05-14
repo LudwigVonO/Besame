@@ -6,25 +6,41 @@ function TapeDeck() {
 
   const [tapeState,setTapeState] = useState({
     activeColor : "",
+    activeTape : null,
     currentSong : "",
-    firstTape : {
+    Tapes : [{
+      id : 1,
       mainColor:"pink",
+      name:"Butterflies in my stomach",
       active : false
     },
-    secondTape : {
+    {
+      id : 2,
       mainColor:"red",
+      name:"Under the sheets",
       active : false
     },
-    thirdTape : {
+    {
+      id : 3,
       mainColor:"lightblue",
+      name:"Cry me a river",
       active : false
-    }
+    }]
   })
+
+  const handleTapeClick = (id) => {
+    if (tapeState.activeTape) {
+
+    }
+  }
+
   return (
     <div id="container">
-          <Tape className="tape" mainColor="pink" name="Butterflies in my stomach"/>
-          <Tape className="tape" mainColor="red" name="Under the sheets"/>
-          <Tape className="tape" mainColor="lightblue" name="Cry me a river"/>
+      {
+        tapeState.Tapes.map(tape=>{
+          return <Tape className="tape" mainColor={tape.mainColor} name={tape.name}/>
+        })
+      }
     </div>
   );
 }
