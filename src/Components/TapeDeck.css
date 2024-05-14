@@ -1,0 +1,12 @@
+#container{
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  width: 80%;
+  position: relative;
+  top: 25%;
+}
+
+.tape{
+  scale: 0.8;
+}

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffe150;
+}
+
+#tapeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+svg {
+  height: 100%;
+  margin: 0 5%;
+}
+
+#Tape1 {
+  transform-origin: 234px 234px;
+}
+
+#Tape2 {
+  transform-origin: 576px 234px;
+}
+
+#Tape1,
+#Tape2 {
+  animation: tapeAnimation 1s linear infinite;
+}
+
+.tapeName {
+  position: relative;
+  top: 25%;
+  font-size: medium;
+  color: black;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes tapeAnimation {
+  from {
+    tranform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.scaleUp {
+  z-index: 1000;
+  animation: scaleUp 4s;
+  animation-fill-mode: forwards
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
